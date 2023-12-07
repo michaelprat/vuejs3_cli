@@ -17,7 +17,7 @@
     <!-- Props  -->
     <!-- Props is use to transfer data from parent component to child component -->
     <!-- @closed is a custom event which its trigger is called by Modal Component --> 
-    <Modal :visible="showModal" :message="message" :title="title" :type="type" @closed="resetVisible"/>
+    <Modal :visible="showModal" :message="message" :title="title" :type="type" @closed="resetVisible" @success="resetVisible"/>
 </template>
 <script>
 import Modal from './Modal.vue'

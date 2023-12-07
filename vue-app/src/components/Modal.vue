@@ -16,8 +16,11 @@ export default
             'title',
             'message',
             'visible',
-            'type'
+            'type',
+            'okMessage',
+      
         ],
+       
         methods: {
             open() {
                 ElMessageBox.confirm(
@@ -30,13 +33,16 @@ export default
                     }
                 )
                     .then(() => {
+                        if(this.title==='Error'){}
+                        else{
                         ElMessage({
                             type: 'success',
-                            message: 'Welcome to vuejs3 CLI',
+                            message: (this.okMessage ? this.okMessage :'Welcome to vuejs3 CLI'),
                         })
+                        }        
                     // $emit is to trigger custom events in parent component 
                     // example:
-                    this.$emit('closed')
+                     this.$emit('success')
                     })
                     .catch(() => {
                         // ElMessage({

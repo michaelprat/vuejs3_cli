@@ -1,4 +1,11 @@
 <template>
+    <!-- Teleport -->
+    <!-- To move the rendering place of template to html -->
+    <!-- example code -->
+    <!-- <teleport to="nameofclass">
+       template content... 
+    </teleport>
+     -->
     <div class="backdrop" @click.self="closeModal">
         <div class="modal">
             <slot>
